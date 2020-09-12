@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">المسطرة الحاسبة الكهربائية</string>
+    <string name="tab_text_1">الرئيسية</string>
+    <string name="tab_text_2">المسطرة</string>
+    <string name="i_anlauf_max_5s"><![CDATA[I __ anlauf__max<=5s]]></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
