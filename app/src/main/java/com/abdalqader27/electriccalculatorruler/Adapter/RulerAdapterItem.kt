@@ -7,26 +7,31 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.abdalqader27.electriccalculatorruler.Models.RulerItem
 import com.abdalqader27.electriccalculatorruler.R
-import kotlinx.android.synthetic.main.ruler_item.view.*
+import com.abdalqader27.electriccalculatorruler.databinding.RulerItemBinding
 
 class RulerAdapterItem(private val rulerList: List<RulerItem>) :
     RecyclerView.Adapter<RulerAdapterItem.ExampleViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExampleViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(
             R.layout.ruler_item,
-            parent, false)
+            parent, false
+        )
         return ExampleViewHolder(itemView)
     }
+
     override fun onBindViewHolder(holder: ExampleViewHolder, position: Int) {
         val currentItem = rulerList[position]
         holder.title.text = currentItem.title
         holder.subtitle.text = currentItem.subtitle
         holder.value.text = currentItem.value
     }
+
     override fun getItemCount() = rulerList.size
     class ExampleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val title: TextView = itemView.title
-        val subtitle: TextView = itemView.subtitle
-        val value: TextView = itemView.value
+
+        val title: TextView = itemView.findViewById(R.id.title)
+        val subtitle: TextView =itemView.findViewById(R.id.subtitle)
+        val value: TextView = itemView.findViewById(R.id.value)
+
     }
 }
